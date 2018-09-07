@@ -1,0 +1,72 @@
+.my-shows {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2em 0;
+}
+
+.my-show {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0.875em;
+  padding: 1em;
+  width: 100%;
+  border: 1px solid #525252;
+
+  @media (min-width: 800px) {
+    width: 48%;
+  }
+
+  @media (min-width: 960px) {
+    width: 31%;
+  }
+
+  &-title {
+    margin: 0 0 0.5em;
+    color: $primary;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+
+  &-content {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &-image {
+    margin-right: 1em;
+    max-height: 200px;
+  }
+
+  &-summary {
+    overflow-y: scroll;
+    max-height: 200px;
+
+    > p {
+      margin-top: 0;
+    }
+  }
+
+  &-controls {
+    margin-top: 1.25em;
+  }
+
+  &-button {
+    padding: 0.2em 1.5em;
+    border: 2px solid $primary;
+    background: transparent;
+    color: $primary;
+    font-size: 1.2em;
+    font-family: $sans-serif;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: lighten($primary, 8%);
+      color: lighten($primary, 8%);
+    }
+  }
+}

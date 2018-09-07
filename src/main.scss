@@ -1,0 +1,12 @@
+// Variables
+$codGray: #191919;
+$lightGray: #eee;
+$mineShaft: #2f2f2f;
+$primary: #ffaa6a;
+$white: #fff;
+$sans-serif: 'Poppins', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+// Imports
+@import 'components/App';
+@import 'components/ShowQueue';
+@import 'components/ShowTile';

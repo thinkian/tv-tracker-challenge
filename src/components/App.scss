@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: $mineShaft;
+  color: $white;
+  font-family: $sans-serif;
+}
+
+.my-app {
+  &-container {
+    margin: 0 auto;
+    max-width: 1360px;
+  }
+
+  &-title {
+    margin: 0.5em 0;
+    background: linear-gradient($primary 56%, $white 57%);
+    -webkit-background-clip: text;
+    text-align: center;
+    font-weight: 600;
+    font-size: 4em;
+
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.my-spinner {
+  position: relative;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+  height: 75px;
+  opacity: 1;
+  transition: opacity linear 0.1s;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    border: 8px solid $lightGray;
+    border-bottom-color: $primary;
+    border-radius: 50%;
+    content: '';
+    opacity: inherit;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    animation: 1.5s linear infinite spinner;
+
+    will-change: transform;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+}
