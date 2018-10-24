@@ -17,15 +17,6 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    if (MOCK_DATA.length) {
-      this.setState({
-        loaded: true,
-        shows: MOCK_DATA
-      });
-    }
-  }
-
   get queue() {
     const { selectedShows } = this.state;
 
