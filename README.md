@@ -2,7 +2,7 @@
 
 Welcome to the TV Tracker Challenge!
 
-This challenge is used to assess your JavaScript coding skills using the [React](https://reactjs.org/) library.
+This challenge is used to assess your JavaScript coding skills using [React](https://reactjs.org/) and the [TV Maze API](http://www.tvmaze.com/api).
 
 ## Overview
 
@@ -23,3 +23,7 @@ To complete this challenge, you will need to write logic to connect pre-built Re
 3. Install the package dependencies in the project directory by running `npm install`
 4. Start the application by running `npm start`
 5. This should open your browser at http://localhost:8000/
+
+## Demo
+
+![TV Tracker demo](tv-tracker.gif)
